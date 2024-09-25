@@ -3,7 +3,8 @@ let den=datum.getDate()
 let mesic=datum.getMonth()+1
 let rok =datum.getFullYear()
 let x = datum.getDay()
-document.getElementById("datum").innerText="Dnes je "+den+". "+mesic+". "+rok +x
+let dny = ["neděle","pondělí","úterý","středa","čtvrtek","pátek","sobota"]
+document.getElementById("datum").innerText="Dnes je "+dny[x]+" "+den+". "+mesic+". "+rok 
 
 function cas(){
 let hodina = datum.getHours()
