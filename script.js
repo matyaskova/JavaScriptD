@@ -2,8 +2,8 @@ let datum = new Date()
 let den=datum.getDate()
 let mesic=datum.getMonth()+1
 let rok =datum.getFullYear()
-
-document.getElementById("datum").innerText="Dnes je "+den+". "+mesic+". "+rok
+let x = datum.getDay()
+document.getElementById("datum").innerText="Dnes je "+den+". "+mesic+". "+rok +x
 
 function cas(){
 let hodina = datum.getHours()
