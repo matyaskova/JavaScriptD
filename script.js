@@ -3,6 +3,7 @@ let den=datum.getDate()
 let mesic=datum.getMonth()+1
 let rok =datum.getFullYear()
 let x = datum.getDay()
+document.write(x)
 document.getElementById("datum").innerText="Dnes je "+den+". "+mesic+". "+rok
 
 function cas(){
