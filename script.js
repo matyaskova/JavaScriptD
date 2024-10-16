@@ -25,4 +25,29 @@ cas()
 function pozdrav(){
 	let cas =new Date()
 	let hodina = cas.getHours()
+	if ((hodina>=5)&&(hodina<9))
+		document.getElementById('pozdrav').innerText="Dobré ráno"
+	else if ((hodina>=9)&&(hodina<11))
+		document.getElementById('pozdrav').innerText="Dobré dopoledne"
+	else if ((hodina>=11)&&(hodina<13))
+		document.getElementById('pozdrav').innerText="Dobré poledne"
+	else if ((hodina>=13)&&(hodina<18))
+		document.getElementById('pozdrav').innerText="Dobré odpoledne"
+	else if ((hodina>=18)&&(hodina<21))
+		document.getElementById('pozdrav').innerText="Dobrý večer"
+	else
+		document.getElementById('pozdrav').innerText="Dobrou noc"
 }
+pozdrav()
+
+function prazdniny(){
+	let dat = new Date()
+	let dnes = dat.getTime()
+	let dat2 = new Date(2024,9,28)
+	let volno = dat2.getTime()
+    let zbytek =Math.floor((volno-dnes)/(1000*60*60*24))
+
+	document.getElementById("prázdniny").innerText="Do školního volna nám zbývá "+zbytek+" dní"
+}
+prazdniny()
+
